@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Progress - Terra</title>
+    <meta name="description" content="Uma nova perspectiva sobre algumas coisas.">
+    <meta name="author" content="Otávio Augusto">
+    <meta name="copyright" content="Copyright © 2021 Otávio | Todos os direitos reservados!">
+    <meta name="robots" content="index, follow">
+    <meta name="rating" content="general">
+
+    <link rel="icon" href="./assets/logo3.png">
+
+    <!-- --------- JS // CSS ---------  -->
+    <link rel="stylesheet" href="./css/terra/style-terra.css">
+
+    <!-- JQuery  -->
+    <script src="./libs/js/jquery-3.6.0.min.js"></script>
+
+    <!-- Popper  -->
+    <script src="./libs/js/popper.min-v2.9.2.js"></script>
+    
+    <!-- Bootstrap  -->
+    <script src="./libs/js/bootstrap.min-v5.0.1.js"></script>
+    
+
+  </head>
+  <body>
+    
+
+        <!-- Nav Bar  -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <!-- Icon Nav Bar  -->
+                <nav class="navbar navbar-light bg-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="terra.html">
+                            <img src="./assets/logo3.png" alt=""  class=" logo d-inline-block align-text-top">
+                            Progress
+                        </a>
+                    </div>
+                </nav>
+
+
+                <!-- botão Nav Bar  -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menus Nav Bar  -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="terra.html">Terra em 24h</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="idadeAnimal.html">Se você fosse um animal</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="notdino.html">Quão rápido você é</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Desativado</a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+<!-- Body ------------------------------------------------------------------------------------------ --> 
+
+        <script>
+            
+            $(window).on('load', function()
+            {
+                setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
+            });
+
+            function removeLoader()
+            {
+                
+                $("#loading").fadeOut(800, function()
+                {
+                    $( "#loading" ).remove();
+                    $("#picLoading").append('<video class="confiaClass"  height="200" autoplay loop> <source src="./assets/images/tinified/iguess.mp4" type="video/mp4" /> Atualize seu navegador.</video>');
+                }); 
+                $("#video").play(); 
+            }
+            
+            $(document).ready(function()
+            {
+                $("#b1").click
+                (
+                    function()
+                    {
+                        $("#clock").css("width", "12.5%");
+                    }
+                );
+                $("#b2").click
+                (
+                    function()
+                    {
+                        $("#clock").css("width", "16.67%");
+                    }
+                );
+                $("#b3").click
+                (
+                    function()
+                    {
+                        $("#clock").css("width", "23.33%");
+                    }
+                );
+                $("#b4").click
+                (
+                    function()
+                    {
+                        $("#clock").css("width", "57.78%");
+                    }
+                );
+                $("#b5").click
+                (
+                    function()
+                    {
+                        $("#clock").css("width", "58.89%");
+                    }
+                );
+                $("#b6").click
+                (
+                    function()
+                    {
+                        $("#clock").css("width", "75.56%");
+                    }
+                );
+                $("#b7").click
+                (
+                    function()
+                    {
+                        $("#clock").css("width", "85.28%");
+                    }
+                );
+                $("#b8").click
+                (
+                    function()
+                    {
+                        $("#clock").css("width", "87.78%");
+                    }
+                );
+                $("#b9").click
+                (
+                    function()
+                    {
+                        $("#clock").css("width", "91.11%");
+                    }
+                );
+                $("#b10").click
+                (
+                    function()
+                    {
+                        $("#clock").css("width", "93.33%");
+                    }
+                );
+                $("#b11").click
+                (
+                    function()
+                    {
+                        $("#clock").css("width", "95.56%");
+                    }
+                );
+                $("#b12").click
+                (
+                    function()
+                    {
+                        $("#clock").css("width", "98.54%");
+                    }
+                );
+                $("#b13").click
+                (
+                    function()
+                    {
+                        $("#clock").css("width", "99.91%");
+                    }
+                );
+            })
+        </script>
+
+        <!-- H6 Header --> 
+        <div class="div-h6">
+            <h6 id="h6Header">E se a Terra existisse por apenas 24 horas?</h6>
+        </div>
+
+        <br>
+
+        <div class="container">
+            <div class="row align-items-center" >
+                <div class="col" >
+                    <h2 class="display-5">4,5 bilhões de anos em apenas 24h</h2>
+                    <p class="lead">Imagine se pudessemos compactar toda as história da terra em apenas 24 horas. </p>
+                </div>
+                <div id="picLoading" class="col col-lg-4" >
+                    <div id="loading" class="loading">
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+                
+          
+        
+        
+        <!-- Progress Bar --> 
+        <div class="box15">
+            <div class="progress">
+                <div id="clock" title="Relógio em progresso" class="progress-bar1 progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="25" aria-valuemin="10" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <!-- Colapso Texto--> 
+        <div class="box15">
+            <!-- Colunas de botões-->
+            
+            <div class="row align-items-center">
+                <!-- Botao Colapso 1-->
+                <div class="col">
+                    <p>
+                        <button id="b1" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                            3:00
+                        </button>
+                    </p>
+                </div>
+
+                <!-- Botao Colapso 2-->
+                <div class="col">
+                    <p>
+                        <button id="b2" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                            4:00
+                        </button>
+                    </p>
+                </div>
+
+                 <!-- Botao Colapso 3-->
+                 <div class="col">
+                    <p>
+                        <button id="b3" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                            5:36
+                        </button>
+                    </p>
+                </div>
+
+                 <!-- Botao Colapso 4-->
+                 <div class="col">
+                    <p>
+                        <button id="b4" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                            13:52
+                        </button>
+                    </p>
+                </div>
+
+                 <!-- Botao Colapso 5-->
+                 <div class="col">
+                    <p>
+                        <button id="b5" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                            14:08
+                        </button>
+                    </p>
+                </div>
+
+                <!-- Botao Colapso 6-->
+                <div class="col">
+                    <p>
+                        <button id="b6" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                            18:08
+                        </button>
+                    </p>
+                </div>
+
+                <!-- Botao Colapso 7-->
+                <div class="col">
+                    <p>
+                        <button id="b7" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                            20:28
+                        </button>
+                    </p>
+                </div>
+
+                <!-- Botao Colapso 8-->
+                <div class="col">
+                    <p>
+                        <button id="b8" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                            21:04
+                        </button>
+                    </p>
+                </div>
+
+                <!-- Botao Colapso 9-->
+                <div class="col">
+                    <p>
+                        <button id="b9" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                            21:52
+                        </button>
+                    </p>
+                </div>
+
+                <!-- Botao Colapso 10-->
+                <div class="col">
+                    <p>
+                        <button id="b10" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                            22:24
+                        </button>
+                    </p>
+                </div>
+
+                <!-- Botao Colapso 11-->
+                <div class="col">
+                    <p>
+                        <button id="b11" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                            22:56   
+                        </button>
+                    </p>
+                </div>
+
+                <!-- Botao Colapso 12-->
+                <div class="col">
+                    <p>
+                        <button id="b12" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                            23:39
+                        </button>
+                    </p>
+                </div>
+
+                <!-- Botao Colapso 13-->
+                <div class="col">
+                    <p>
+                        <button id="b13" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
+                            23:58:43
+                        </button>
+                    </p>
+                </div>
+                
+            </div>
+
+
+
+            
+                <!-- TEXTO Colapso ---------------------------->
+
+                <!-- TEXTO Colapso 1 -->
+                <div class="collapse" id="collapse1">
+                    <div class="card card-body">
+                        3:00 | Até essa hora, tudo o que aconteceu foram bombardeios de meteoros e outros corpos celestes.
+                    </div>
+                </div>
+
+                <!-- TEXTO Colapso 2-->
+                <div class="collapse" id="collapse2">
+                    <div class="card card-body">
+                        4:00 | Origem da vida.
+                    </div>
+                </div>
+
+                <!-- TEXTO Colapso 3-->
+                <div class="collapse" id="collapse3">
+                    <div class="card card-body">
+                        5:36 | Os fósseis mais antigos já encontrados pelo homem datam dessa hora.
+                    </div>
+                </div>
+
+                <!-- TEXTO Colapso 4-->
+                <div class="collapse" id="collapse4">
+                    <div class="card card-body">
+                        6:00 - 13:52 | Entre esses horário ocorreram várias formações de jazidas de ferro e outros minerais.
+                    </div>
+                </div>
+
+                <!-- TEXTO Colapso 5-->
+                <div class="collapse" id="collapse5">
+                    <div class="card card-body">
+                    14:08 | As primeiras algas unicelulares começaram a surgir.
+                    </div>
+                </div>
+
+                <!-- TEXTO Colapso 6-->
+                <div class="collapse" id="collapse6">
+                    <div class="card card-body">
+                        18:08 | Finalmente a evolução permitiu a reprodução sexuada.
+                    </div>
+                </div>
+
+                <!-- TEXTO Colapso 7-->
+                <div class="collapse" id="collapse7">
+                    <div class="card card-body">
+                        20:28 | Chegaram as macroalgas e, 20 minutos depois, as águas-vivas.
+                    </div>
+                </div>
+
+                <!-- TEXTO Colapso 8-->
+                <div class="collapse" id="collapse8">
+                    <div class="card card-body">
+                        21:04 | Surgiram as trilobitas (artrópodes).
+                    </div>
+                </div>
+
+                <!-- TEXTO Colapso 9-->
+                <div class="collapse" id="collapse9">
+                    <div class="card card-body">
+                        21:52 | Foram encontradas as primeiras plantas terrestres.
+                    </div>
+                </div>
+
+                <!-- TEXTO Colapso 10-->
+                <div class="collapse" id="collapse10">
+                    <div class="card card-body">
+                        22:24 | As grandes jazidas de carvão começam a serem formadas.
+                    </div>
+                </div>
+
+                <!-- TEXTO Colapso 11-->
+                <div class="collapse" id="collapse11">
+                    <div class="card card-body">
+                        22:56 | Dinossauros deram seus primeiros passos na Terra.
+                    </div>
+                </div>
+
+                <!-- TEXTO Colapso 12-->
+                <div class="collapse" id="collapse12">
+                    <div class="card card-body">
+                        23:39 | Surgem as primeiras espécies de mamíferos.
+                    </div>
+                </div>
+
+
+                <!-- TEXTO Colapso 13-->
+                <div class="collapse" id="collapse13">
+                    <div class="card card-body">
+                        23:58:43 | Nós, os seres humanos, só surgimos.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <br>
+
+        <div style="background-color: #303036;">
+            <div class="row">
+                
+                <div class="col-sm-9 bg-light p-3 border align-self-center">
+                    Copyright © 2021 Otávio | Todos os direitos reservados!
+                </div>
+
+                <div class="col-3 bg-light p-3 border align-self-center">
+                    <div class="row">
+                        <div class="col-esq">
+                            <img src="./assets/logo3.png" class="roundedlogo" alt="...">
+                        </div>
+                        <div class="col-dir ">
+                            Progress
+                        </div>
+                        
+                      </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var nome = sessionStorage.getItem('nome');
+            console.log(nome);
+
+            $("#h6Header").text(nome + ", " + "já pensou se a Terra existisse por apenas 24 horas?");
+        </script>
+
+    </body>
+</html>
