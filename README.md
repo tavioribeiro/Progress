@@ -12,4 +12,4 @@ Data: 03/06/21
 
 #### Execução
 
-* [Clique Aqui 📌](https://tavioribeiro.github.io/progress)
+* [Clique Aqui 📌](https://tavioribeiro.github.io/Progress/)
