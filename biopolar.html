@@ -13,7 +13,7 @@
     <link rel="icon" href="./assets/logo3.png">
 
     <!-- --------- JS // CSS ---------  -->
-    <link rel="stylesheet" href="./css/notdino/style-notdino.css">
+    <link rel="stylesheet" href="./css/biopolar/style-biopolar.css">
 
     <!-- JQuery  -->
     <script src="./libs/js/jquery-3.6.0.min.js"></script>
@@ -23,6 +23,7 @@
 
     <!-- Bootstrap  -->
     <script src="./libs/js/bootstrap.min-v4.6.0.js"></script>
+
 
     
   </head>
@@ -60,10 +61,6 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="notdino.html">Quão rápido você é</a>
                     </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="penalTea.html">PenalTea</a>
-                    </li>
                     
                     <li class="nav-item">
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Desativado</a>
@@ -85,16 +82,6 @@
         <div class="container">
             <div class="row align-items-center" >
 
-                <div id="picLoading" class="col col-lg-3" >
-                    <div id="loading" class="loading">
-                        
-                        <video class="confiaClass" height="200" autoplay loop muted>
-                            <source src="./assets/images/tinified/slow.mp4" type="video/mp4" />
-                            Atualize seu navegador.
-                        </video>
-                    </div>
-                </div>
-                
                 <div class="col" >
                     <h2 class="display-5">Um teste pra ver qual o seu reflexo</h2>
                     <p class="lead">Imagine se pudesse medir o seu reflexo, seria incrível né 😔? Agora você pode 🥳!! </p>
@@ -102,6 +89,21 @@
                     <p class="lead small-text">Por essa você não esperava não é mesmo 🙂?</p>
                     <button id="iniciar" class="btn btn-primary">Continuar</button>
                 </div>
+
+                <div id="picLoading" class="col col-lg-3" >
+                    <div id="loading" class="loading">
+                        
+                        <img src="./assets/images/tinified/bio.gif" class="confiaClass" alt="">
+                        <!--  
+                        <video class="confiaClass" height="200" autoplay loop muted>
+                            <source src="./assets/images/tinified/bio.gif" type="video/mp4" />
+                            Atualize seu navegador.
+                        </video>
+                        -->
+                    </div>
+                </div>
+                
+                
                 
             </div>
         </div>
@@ -113,23 +115,28 @@
             <div id="boxbox" class="row align-items-center">
                 <div class="col">
                     <div id="bottas" class="bottas">
-                        <div class="character" id="character"></div>
+                        <style>
+                            canvas
+                            {
+                                border:1px solid #d3d3d3;
+                                background-color: #f1f1f1;
+                            }
+                        </style>
+                        
                     </div>
                 </div>
             </div>
             <br>
             <div class="row align-items-center">
                 <div class="col">
-                    <label id="count" class=" h6 form-label h6-form">Total cliques: 0</label>
-                </div>
-                
-                
-
-                <div class="col">
-                    <label id="time" class=" h6 form-label h6-form">Tempo: 0</label>
+                    <label id="count" class=" h6 form-label h6-form">Pontos: 0</label>
                 </div>
             </div>
         </div>
+
+        
+            
+        </script>
         
         <br>
             <!-- Modal 2 -->
@@ -143,9 +150,6 @@
                             </div>
                             <div class="modal-body">
                                 <p id="texto"></p>
-                                <p id="texto1"></p>
-                                <p id="texto2"></p>
-                                <p id="texto3"></p>
             
                                 <p> FONTE:</p>
                                 <img class="confiaClass" src="./assets/images/tinified/confia2.jpg" alt="">
@@ -233,101 +237,10 @@
                     'min-height': '475px',
                 });
 
+                startGame();
             });
 
-            var counter = 0;
-            var seconds = 0;
-
-            var randTop = 0;
-
-            var randLeft = 0;
             
-
-            $('#counter span').html(counter);
-            $('#timer span').html(seconds); 
-
-            $("#character").click(function()
-            {
-                counter = counter + 1;
-                $('#count').html("Total cliques: " + counter);
-
-                //$("#character").click
-
-                var h = parseInt($("#bottas").css("height")); 
-                console.log($("#bottas").css("height"));
-                var w = parseInt($("#bottas").css("width"));
-
-                randTop = Math.floor(Math.random() * h) - 30;
-                randLeft = Math.floor(Math.random() * w) - 30;
-
-                if(randTop < 0)
-                {
-                    randTop = randTop * -1;
-                }
-
-                if(randLeft < 0)
-                {
-                    randLeft = (randLeft * -1);
-                }
-
-                $("#character").css("margin-top", randTop + "px");
-                $("#character").css("margin-left", randLeft + "px");
-
-                if (counter == 1)
-                {
-                    tempo();
-                }
-
-                if (counter == 15)
-                {
-                    $("#pupUp").modal('show');
-                    tempoStop();
-
-                    //console.log(media);
-                    var media = counter/seconds;
-                    console.log(media);
-
-
-                    var relacao1 = ((5 * 1.2) / media).toFixed(1);
-                    var relacao2 = ((7.25 * 1.2) / media).toFixed(1);
-                    var relacao3 = ((20 * 1.2) / media).toFixed(1);
-
-                    if(media > 1.2)
-                    {
-                        if(sexo == 1)
-                        {
-                            $('#texto').html(nome + ", você foi rápido, mas não o suficiente!"); 
-                        }
-                        else
-                        {
-                            $('#texto').html(nome + ", você foi rápida, mas não o suficiente!"); 
-                        } 
-                    }
-                    else
-                    {
-                        $('#texto').html(nome + ", você teve um reflexo abaixo do padrão!");
-                    }
-
-                    $('#texto1').html("🐹 Um esquilo consegue ser " + relacao1 + "x mais rápido que você!");
-                    $('#texto2').html("🐦 Os pássaros conseguem ser " + relacao2 + "x mais rápidos que você!");
-                    $('#texto3').html("🪰 Uma mosca doméstica consegue " + relacao3 + "x mais rápida que você!");
-                }
-            });
-
-            let intervalId;
-            function tempo()
-            {
-                intervalId = window.setInterval(function()
-                {
-                    seconds = seconds + 1;
-                    $('#time').html("Tempo: " + seconds);
-                }, 1000);
-            }
-
-            function tempoStop()
-            {
-                window.clearInterval(intervalId);
-            }
 
             $("#reload").click(function()
             {

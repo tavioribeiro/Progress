@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Progress - PenalTea</title>
+    <meta name="description" content="Uma nova perspectiva sobre algumas coisas.">
+    <meta name="author" content="Otávio Augusto">
+    <meta name="copyright" content="Copyright © 2021 Otávio | Todos os direitos reservados!">
+    <meta name="robots" content="index, follow">
+    <meta name="rating" content="general">
+
+    <link rel="icon" href="./assets/logo3.png">
+
+    <!-- --------- JS // CSS ---------  -->
+    <link rel="stylesheet" href="./css/penaltea/style-penaltea.css">
+
+    <!-- JQuery  -->
+    <script src="./libs/js/jquery-3.6.0.min.js"></script>
+
+    <!-- Popper  -->
+    <script src="./libs/js/popper.min-v2.9.2.js"></script>
+
+    <!-- Bootstrap  -->
+    <script src="./libs/js/bootstrap.min-v4.6.0.js"></script>
+
+    
+  </head>
+  <body>
+        <!-- Nav Bar  -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <!-- Icon Nav Bar  -->
+                <nav class="navbar navbar-light bg-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="terra.html">
+                            <img src="./assets/logo3.png" alt=""  class=" logo d-inline-block align-text-top">
+                            Progress
+                        </a>
+                    </div>
+                </nav>
+
+
+                <!-- botão Nav Bar  -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menus Nav Bar  -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="terra.html">Terra em 24h</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"  href="idadeAnimal.html">Se você fosse um animal</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="notdino.html">Quão rápido você é</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="penalTea.html">PenalTea</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Desativado</a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+<!-- Body ------------------------------------------------------------------------------------------ --> 
+
+        <!-- H6 Header --> 
+        <div class="div-h6">
+            <h6 id="h6Header"></h6>
+        </div>
+        
+        <br>
+
+        <div class="container">
+            <div class="row align-items-center" >
+
+                <div id="picLoading" class="col col-lg-3" >
+                    <div id="loading" class="loading">
+                        
+                        <video class="confiaClass" height="200" autoplay loop muted>
+                            <source src="./assets/images/tinified/robot.mp4" type="video/mp4" />
+                            Atualize seu navegador.
+                        </video>
+                    </div>
+                </div>
+                
+                <div class="col" >
+                    <h2 class="display-5">Uma forma simples de montar seu esquema tático</h2>
+                    <p class="lead">Utilize os dois maiores jogadores da história em todas as possições!!!🥳 </p>
+
+                    <button id="show" class="btn btn-primary">Mostrar</button>
+                    
+                </div>
+                
+            </div>
+        </div>
+        <br>
+
+        <div class="boxind">
+            <div id="boxbox" class="container boxind">
+                <div class="row justify-content-md-center">
+                    
+                    <div class="col-md-auto">
+                        
+                        <canvas id="c" class="field" width = "845.5" height = "564" ></canvas>
+    
+                    </div>
+    
+                    <div class="row justify-content-md-center">
+    
+                    <div class="col">
+                        <div class="container boxind">
+                            <div class="row ">
+                                <div class="col">
+                                    <h6 id="a" class="display-5">4-4-2</h6>
+                                </div>
+                                <div class="col">
+                                    <button id="clean" class="btn btn-primary">Limpar</button>
+                                </div>
+                                <div class="col">
+                                    <h6 id="b" class="display-5">4-3-3</h6>
+                                </div>
+                            </div>
+                          </div>
+                        
+                        
+                        <div style="background-color:powderblue;" id="info"></div>
+    
+                    </div>
+                </div>
+              </div>
+            </div>
+
+
+
+        <div id="boxbox1" class="brin"></div>
+
+        <div style="background-color: #303036;">
+            <div class="row">
+                
+                <div class="col-sm-9 bg-light p-3 border align-self-center">
+                    Copyright © 2021 Otávio | Todos os direitos reservados!
+                </div>
+
+                <div class="col-3 bg-light p-3 border align-self-center">
+                    <div class="row">
+                        <div class="col-esq">
+                            <img src="./assets/logo3.png" class="roundedlogo" alt="...">
+                        </div>
+                        <div class="col-dir ">
+                            Progress
+                        </div>
+                        
+                      </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            var nome = sessionStorage.getItem('nome');
+            console.log(nome);
+
+            $("#h6Header").text(nome + ", " + "já pensou na possibilidade de desenhar seu esquema tático sem ser no papel?");
+        </script>
+        
+        
+        <script>
+            $("#boxbox").hide();
+            $("#boxbox1").hide();
+            $("#show").click
+            (
+                function()
+                {
+                    $("#boxbox").show();
+                    $("#boxbox1").show();
+                }                
+            );
+
+            var background = new Image();
+            background.src = "./assets/images/tinified/d7b05539aac8c5416c73ca046f977742.jpg";
+
+            var canvas = $("#c");
+            var c = canvas[0].getContext("2d");
+
+            var myVar;
+ 
+
+            var team1 = "./assets/images/tinified/cr7.png";
+            var team1Player1 = new DragImage(team1, 755, 255);
+            var team1Player2 = new DragImage(team1, 625, 185);
+            var team1Player3 = new DragImage(team1, 625, 325);
+            var team1Player4 = new DragImage(team1, 545, 84); 
+            var team1Player5 = new DragImage(team1, 545, 430);
+            var team1Player6 = new DragImage(team1, 430, 245);
+            var team1Player7 = new DragImage(team1, 340, 170); 
+            var team1Player8 = new DragImage(team1, 340, 340);
+            var team1Player9 = new DragImage(team1, 195, 84);
+            var team1Player10 = new DragImage(team1, 195, 430); 
+            var team1Player11 = new DragImage(team1, 95, 255);
+
+            var team2 = "./assets/images/tinified/messi10.png";
+            var team2Player1 = new DragImage(team2, 45, 255); 
+            var team2Player2 = new DragImage(team2, 170, 180);
+            var team2Player3 = new DragImage(team2, 170, 330);
+            var team2Player4 = new DragImage(team2, 235, 100);
+            var team2Player5 = new DragImage(team2, 235, 400);
+            var team2Player6 = new DragImage(team2, 300, 185);
+            var team2Player7 = new DragImage(team2, 300, 325);
+            var team2Player8 = new DragImage(team2, 420, 70);
+            var team2Player9 = new DragImage(team2, 420, 440);
+            var team2Player10 = new DragImage(team2, 585, 160);
+            var team2Player11 = new DragImage(team2, 585, 345);  
+            
+            var loop = setInterval(function()
+            {
+                c.fillRect(0, 0, 846, 564);
+                c.drawImage(background,0,0);
+
+                team1Player1.update();
+                team1Player2.update();
+                team1Player3.update();
+                team1Player4.update();
+                team1Player5.update();
+                team1Player6.update();
+                team1Player7.update();
+                team1Player8.update();
+                team1Player9.update();
+                team1Player10.update();
+                team1Player11.update();
+
+
+                team2Player1.update();
+                team2Player2.update();
+                team2Player3.update();
+                team2Player4.update();
+                team2Player5.update();
+                team2Player6.update();
+                team2Player7.update();
+                team2Player8.update();
+                team2Player9.update();
+                team2Player10.update();
+                team2Player11.update();
+            }, 5);
+
+            var mouseX = 0,
+                mouseY = 0;
+            var mousePressed = false;
+            var dragging = false;
+            canvas.mousemove(function(e) {
+                mouseX = e.offsetX;
+                mouseY = e.offsetY;
+            })
+
+            $(document).mousedown(function() {
+                mousePressed = true;
+            }).mouseup(function() {
+                mousePressed = false;
+                dragging = false;
+            });
+
+            function DragImage(src, x, y) 
+            {
+                var that = this;
+                var startX = 0,
+                    startY = 0;
+                var drag = false;
+                
+                this.x = x;
+                this.y = y;
+                var img = new Image();
+                img.src = src;
+                
+
+
+                
+                this.update = function()
+                {
+                    if (mousePressed )
+                    {
+                            clearInterval(myVar);
+
+                            var left = that.x;
+                            var right = that.x + img.width;
+                            var top = that.y;
+                            var bottom = that.y + img.height;
+                            if (!drag) {
+                                startX = mouseX - that.x;
+                                startY = mouseY - that.y;
+                            }
+                            if (mouseX < right && mouseX > left && mouseY < bottom && mouseY > top) {
+                                if (!dragging){
+                        dragging = true;
+                                    drag = true;
+                                }
+                                
+                            }
+                        
+                    } else {
+                        
+                        drag = false;
+                    }
+                    if (drag) {
+                        that.x = mouseX - startX;
+                        that.y = mouseY - startY;
+                    }
+
+                    var position = "X: " + that.x + "  Y: " + that.y
+                    //$("div").filter("#info").text(position); 
+
+                    c.drawImage(img, that.x, that.y);
+                }
+            }
+        </script>
+        <script>
+            $("#clean").click
+            (
+                function()
+                {
+                    myFunction();
+                    
+                    $("#a").text("Customizado");
+                    $("#b").text("Customizado");
+                }                
+            );
+
+            function myFunction()
+            {
+                myVar = setInterval(alertFunc, 5);
+            }
+
+            function alertFunc()
+            {
+                team1Player1 = calcRonaldoX(775, team1Player1, 1);
+                team1Player1 = calcRonaldoY(515, team1Player1);
+                team1Player1.update();
+
+                team1Player2 = calcRonaldoX(725, team1Player2, 2);
+                team1Player2 = calcRonaldoY(515, team1Player2);
+                team1Player2.update();
+                
+                team1Player3 = calcRonaldoX(675, team1Player3, 3);
+                team1Player3 = calcRonaldoY(515, team1Player3);
+                team1Player3.update();
+
+                team1Player4 = calcRonaldoX(625, team1Player4, 4);
+                team1Player4 = calcRonaldoY(515, team1Player4);
+                team1Player4.update();
+
+                team1Player5 = calcRonaldoX(575, team1Player5, 5);
+                team1Player5 = calcRonaldoY(515, team1Player5);
+                team1Player5.update();
+
+                team1Player6 = calcRonaldoX(525, team1Player6, 6);
+                team1Player6 = calcRonaldoY(515, team1Player6);
+                team1Player6.update();
+
+                team1Player7 = calcRonaldoX(475, team1Player7, 7);
+                team1Player7 = calcRonaldoY(515, team1Player7);
+                team1Player7.update();
+
+                team1Player8 = calcRonaldoX(425, team1Player8, 8);
+                team1Player8 = calcRonaldoY(515, team1Player8);
+                team1Player8.update();
+
+                team1Player9 = calcRonaldoX(375, team1Player9, 9);
+                team1Player9 = calcRonaldoY(515, team1Player9);
+                team1Player9.update();
+
+                team1Player10 = calcRonaldoX(325, team1Player10, 10);
+                team1Player10 = calcRonaldoY(515, team1Player10);
+                team1Player10.update();
+
+                team1Player11 = calcRonaldoX(275, team1Player11, 11);
+                team1Player11 = calcRonaldoY(515, team1Player11);
+                team1Player11.update();
+
+
+
+
+
+
+
+                team2Player1 = calcMessiX(30, team2Player1, 1);
+                team2Player1 = calcMessiY(0, team2Player1);
+                team2Player1.update();
+
+                team2Player2 = calcMessiX(725, team2Player2, 2);
+                team2Player2 = calcMessiY(0, team2Player2);
+                team2Player2.update();
+                
+                team2Player3 = calcMessiX(675, team2Player3, 3);
+                team2Player3 = calcMessiY(0, team2Player3);
+                team2Player3.update();
+
+                team2Player4 = calcMessiX(625, team2Player4, 4);
+                team2Player4 = calcMessiY(0, team2Player4);
+                team2Player4.update();
+
+                team2Player5 = calcMessiX(575, team2Player5, 5);
+                team2Player5 = calcMessiY(0, team2Player5);
+                team2Player5.update();
+
+                team2Player6 = calcMessiX(525, team2Player6, 6);
+                team2Player6 = calcMessiY(0, team2Player6);
+                team2Player6.update();
+
+                team2Player7 = calcMessiX(475, team2Player7, 7);
+                team2Player7 = calcMessiY(0, team2Player7);
+                team2Player7.update();
+
+                team2Player8 = calcMessiX(425, team2Player8, 8);
+                team2Player8 = calcMessiY(0, team2Player8);
+                team2Player8.update();
+
+                team2Player9 = calcMessiX(375, team2Player9, 9);
+                team2Player9 = calcMessiY(0, team2Player9);
+                team2Player9.update();
+
+                team2Player10 = calcMessiX(325, team2Player10, 10);
+                team2Player10 = calcMessiY(0, team2Player10);
+                team2Player10.update();
+
+                team2Player11 = calcMessiX(275, team2Player11, 11);
+                team2Player11 = calcMessiY(0, team2Player11);
+                team2Player11.update();
+            }
+
+            function calcRonaldoX(ox, player, num)
+            {
+                var temp = player;
+
+                var comp = 825 - 48 * num;
+
+                if(player.x < comp)
+                {
+                    temp = new DragImage(team1, player.x+1, player.y);
+                }
+                if(player.x > comp)
+                {
+                    temp = new DragImage(team1, player.x-1, player.y);
+                }
+                return temp;
+            }
+
+            function calcRonaldoY(oy, player)
+            {
+                var temp = player;
+                if(player.y < oy+1)
+                {
+                    temp = new DragImage(team1, player.x, player.y+1);
+                }
+                return temp;
+            }
+
+
+
+            function calcMessiX(ox, player, num)
+            {
+                var temp = player;
+
+                var comp = -18 + 48 * num;
+
+                if(player.x < comp)
+                {
+                    temp = new DragImage(team2, player.x+1, player.y);
+                }
+                if(player.x > comp)
+                {
+                    temp = new DragImage(team2, player.x-1, player.y);
+                }
+                return temp;
+            }
+
+            function calcMessiY(oy, player)
+            {
+                var temp = player;
+                if(player.y > oy+1)
+                {
+                    temp = new DragImage(team2, player.x, player.y-1);
+                }
+                return temp;
+            }
+        </script>
+    </body>
+</html>
+
