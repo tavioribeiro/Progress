@@ -98,13 +98,46 @@
                 <div class="col" >
                     <h2 class="display-5">Uma forma simples de montar seu esquema tático</h2>
                     <p class="lead">Utilize os dois maiores jogadores da história em todas as possições!!!🥳 </p>
-
+                    <p class="lead small-text">Inclusive no gol 🙂</p>
                     <button id="show" class="btn btn-primary">Mostrar</button>
                     
                 </div>
                 
             </div>
         </div>
+        
+
+        <!-- Modal 2 -->
+        <div class="modal fade" id="pupUpInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Informações</h5>
+                        
+                        </div>
+                        <div class="modal-body">
+                            <p> O uso é bem simples, basta clicar e arrastar um jogador para outra posição do campo.</p>
+                            <p> Para resetar e iniciar do zero seu esquema, basta clicar em "Resetar"!</p>
+                            <div class="fullL">
+                                <video class="objCenter confiaClass" height="200" autoplay loop muted>
+                                    <source src="./assets/images/tinified/demo2.mp4" type="video/mp4" />
+                                    Atualize seu navegador.
+                                </video>
+                                
+                            </div>
+                            
+                        </div>
+                        <div class="modal-footer">
+                        
+                        <button id="closeModal" type="button" class="btn btn-primary" data-dismiss="modal" >Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <br>
+        <br>
         <br>
 
         <div class="boxind">
@@ -125,9 +158,11 @@
                                 <div class="col">
                                     <h6 id="a" class="display-5">4-4-2</h6>
                                 </div>
+
                                 <div class="col">
-                                    <button id="clean" class="btn btn-primary">Limpar</button>
+                                    <button id="clean" class="btn btn-primary">Resetar</button>
                                 </div>
+                                
                                 <div class="col">
                                     <h6 id="b" class="display-5">4-3-3</h6>
                                 </div>
@@ -142,7 +177,8 @@
               </div>
             </div>
 
-
+        <br id="br1">
+        <br id="br2">
 
         <div id="boxbox1" class="brin"></div>
 
@@ -167,6 +203,10 @@
             </div>
         </div>
         
+        <br id="br3">
+        <br id="br4">
+        <br id="br5">
+
         <script>
             var nome = sessionStorage.getItem('nome');
             console.log(nome);
@@ -178,10 +218,29 @@
         <script>
             $("#boxbox").hide();
             $("#boxbox1").hide();
+            $("#br1").hide();
+            $("#br2").hide();
+            $("#br3").hide();
+            $("#br4").hide();
+            $("#br5").hide();
+
             $("#show").click
             (
                 function()
                 {
+                    $("#pupUpInfo").modal('show'); 
+                }                
+            );
+
+            $("#closeModal").click
+            (
+                function()
+                {
+                    $("#br1").show();
+                    $("#br2").show();
+                    $("#br3").show();
+                    $("#br4").show();
+                    $("#br5").show();
                     $("#boxbox").show();
                     $("#boxbox1").show();
                 }                
